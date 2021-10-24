@@ -819,11 +819,22 @@
   {
     "name":"org.whispersystems.signalservice.internal.push.SignalServiceProtos$DataMessage",
     "methods":[{"name":"newBuilder","parameterTypes":[] },
-               {"name":"getBody","parameterTypes":[] }]
+               {"name":"hasBody","parameterTypes":[] },
+               {"name":"getAttachmentsList","parameterTypes":[] },
+               {"name":"getAttachments","parameterTypes":["int"] },
+               {"name":"getBody","parameterTypes":[] },
+               {"name":"getBodyBytes","parameterTypes":[] }]
   },
   {
     "name":"org.whispersystems.signalservice.internal.push.SignalServiceProtos$DataMessage$Builder",
-    "methods":[{"name":"getBody","parameterTypes":[] }]
+    "methods":[{"name":"getBody","parameterTypes":[] },
+               {"name":"getAttachmentsList","parameterTypes":[] },
+               {"name":"getAttachments","parameterTypes":["int"] },
+               {"name":"getBodyBytes","parameterTypes":[] },
+               {"name":"hasBody","parameterTypes":[] },
+               {"name":"clearBody","parameterTypes":[] },
+               {"name":"setBodyBytes","parameterTypes":["com.google.protobuf.ByteString"] },
+               {"name":"setBody","parameterTypes":["java.lang.String"] }]
   },
   {
     "name":"org.whispersystems.signalservice.internal.push.SignalServiceProtos$NullMessage",
@@ -832,13 +843,23 @@
   {
     "name":"org.whispersystems.signalservice.internal.push.SignalServiceProtos$ReceiptMessage",
     "methods":[{"name":"newBuilder","parameterTypes":[] },
+              {"name":"getTimestampList","parameterTypes":[] },
               {"name":"hasType","parameterTypes":[] },
               {"name":"getType","parameterTypes":[] }]
   },
   {
     "name":"org.whispersystems.signalservice.internal.push.SignalServiceProtos$ReceiptMessage$Builder",
     "methods":[ {"name":"getType","parameterTypes":[] },
+                {"name":"clearType","parameterTypes":[] },
+                {"name":"hasType","parameterTypes":[] },
       {"name":"setType","parameterTypes":["org.whispersystems.signalservice.internal.push.SignalServiceProtos$ReceiptMessage$Type"] } ]
+  },
+  {
+    "name":"org.whispersystems.signalservice.internal.push.SignalServiceProtos$ReceiptMessage$Type",
+    "methods":[ {"name":"valueOf","parameterTypes":["int"] },
+                {"name":"getValueDescriptor","parameterTypes":[] },
+                {"name":"valueOf","parameterTypes":["com.google.protobuf.Descriptors$EnumValueDescriptor"] },
+                {"name":"valueOf","parameterTypes":["java.lang.String"] }]
   },
   {
     "name":"org.whispersystems.signalservice.internal.push.SignalServiceProtos$SyncMessage",
@@ -977,7 +998,13 @@
   },
   {
     "name":"org.whispersystems.signalservice.internal.push.SignalServiceProtos$SyncMessage$Configuration",
-    "methods":[{"name":"newBuilder","parameterTypes":[] }]
+    "methods":[{"name":"newBuilder","parameterTypes":[] },
+               {"name":"getReadReceipts","parameterTypes":[] }]
+  },
+  {
+    "name":"org.whispersystems.signalservice.internal.push.SignalServiceProtos$SyncMessage$Configuration$Builder",
+    "methods":[ {"name":"getReadReceipts","parameterTypes":[] },
+                {"name":"setReadReceipts","parameterTypes":["boolean"] }]
   },
   {
     "name":"org.whispersystems.signalservice.internal.push.SignalServiceProtos$SyncMessage$Contacts",
@@ -1017,6 +1044,8 @@
     "name":"org.whispersystems.signalservice.internal.push.SignalServiceProtos$SyncMessage$Groups$Builder",
     "methods":[{"name":"getBlob","parameterTypes":[] },
                {"name":"hasBlob","parameterTypes":[] },
+               {"name":"clearBlob","parameterTypes":[] },
+               {"name":"getBlobBuilder","parameterTypes":[] },
                {"name":"setBlob","parameterTypes":["org.whispersystems.signalservice.internal.push.SignalServiceProtos$AttachmentPointer"] }]
   },
   {
@@ -1081,7 +1110,14 @@
   },
   {
     "name":"org.whispersystems.signalservice.internal.push.SignalServiceProtos$SyncMessage$StickerPackOperation",
-    "methods":[{"name":"newBuilder","parameterTypes":[] }]
+    "methods":[{"name":"newBuilder","parameterTypes":[] },
+               {"name":"hasPackId","parameterTypes":[] },
+               {"name":"getPackId","parameterTypes":[] }]
+  },
+  {
+    "name":"org.whispersystems.signalservice.internal.push.SignalServiceProtos$SyncMessage$StickerPackOperation$Builder",
+    "methods":[ {"name":"getPackId","parameterTypes":[] },
+                {"name":"setPackId","parameterTypes":["com.google.protobuf.ByteString"] }]
   },
   {
     "name":"org.whispersystems.signalservice.internal.push.SignalServiceProtos$SyncMessage$ViewOnceOpen",
@@ -1093,7 +1129,16 @@
   },
   {
     "name":"org.whispersystems.signalservice.internal.push.SignalServiceProtos$TypingMessage",
-    "methods":[{"name":"newBuilder","parameterTypes":[] }]
+    "methods":[{"name":"newBuilder","parameterTypes":[] },
+               {"name":"hasTimestamp","parameterTypes":[] },
+               {"name":"getTimestamp","parameterTypes":[] }]
+  },
+  {
+    "name":"org.whispersystems.signalservice.internal.push.SignalServiceProtos$TypingMessage$Builder",
+    "methods":[{"name":"getTimestamp","parameterTypes":[] },
+               {"name":"clearTimestamp","parameterTypes":[] },
+               {"name":"hasTimestamp","parameterTypes":[] },
+               {"name":"setTimestamp","parameterTypes":["long"] }]
   },
   {
     "name":"org.whispersystems.signalservice.internal.push.SignalServiceProtos$Verified",
